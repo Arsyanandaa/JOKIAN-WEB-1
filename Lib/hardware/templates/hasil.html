@@ -13,14 +13,11 @@
 <body class="bg-gray-50 text-gray-900 min-h-screen">
     <div class="max-w-5xl mx-auto px-6 py-10">
 
-        <!-- Header -->
         <div class="text-center mb-10">
             <h1 class="text-3xl font-bold text-blue-700 mb-2">Hasil Rekomendasi Perangkat Keras</h1>
             <p class="text-gray-600">Berdasarkan kebutuhan dan budget yang kamu masukkan</p>
         </div>
 
-        <!-- Input User -->
-        <!-- Input User -->
         <div class="bg-white rounded-lg shadow p-6 mb-8">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">Data Input Anda</h2>
             <p><strong>💰 Budget:</strong> Rp {{ budget|intcomma }}</p>
@@ -42,7 +39,6 @@
         </div>
 
 
-        <!-- Hasil Rekomendasi -->
         <div>
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Rekomendasi Produk</h2>
 
@@ -50,7 +46,8 @@
             <div class="bg-white rounded-lg shadow p-6 mb-5 hover:shadow-lg transition">
                 <div class="flex justify-between items-center mb-3">
                     <h3 class="text-lg font-semibold text-gray-900">{{ item.nama }}</h3>
-                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Rp {{ item.harga|intcomma }}</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Rp {{ item.harga|intcomma
+                        }}</span>
                 </div>
                 <p class="text-sm text-gray-600 mb-2"><strong>Kategori:</strong> {{ item.kategori }}</p>
                 <p class="text-gray-700">{{ item.deskripsi }}</p>
@@ -62,7 +59,6 @@
             {% endfor %}
         </div>
 
-        <!-- Tombol Kembali -->
         <div class="mt-8 text-center">
             <a href="/" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">
                 🔙 Kembali ke Pencarian

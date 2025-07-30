@@ -25,17 +25,14 @@ def rekomendasi_view(request):
         custom_usage = request.POST.get('custom_usage', '')
         komponen = request.POST.getlist('components')
 
-        # Query user = free text + usage
         query_text = (usage or '') + " " + custom_usage
 
-        # Filter produk sesuai budget dan kategori
         if komponen:
             hardware_qs = Produk.objects.filter(harga__lte=budget, kategori__in=komponen)
         else:
             hardware_qs = Produk.objects.filter(harga__lte=budget)
 
         if hardware_qs.exists():
-            # Ambil deskripsi produk + query user
             documents = [h.deskripsi for h in hardware_qs]
             documents.append(query_text)
 
@@ -45,11 +42,9 @@ def rekomendasi_view(request):
 
             scores = cosine_sim[0]
 
-            # ✅ Tentukan threshold
-            THRESHOLD = 0.15  # bisa diatur (0.0 - 1.0)
+            THRESHOLD = 0.15
             ranked_idx = np.argsort(scores)[::-1]
 
-            # ✅ Hanya ambil produk dengan similarity >= threshold
             results = [hardware_qs[int(i)] for i in ranked_idx if scores[i] >= THRESHOLD]
 
     context = {
