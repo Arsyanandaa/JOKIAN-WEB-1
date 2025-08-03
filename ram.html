@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processor - ByteBudget</title>
+    <title>RAM - ByteBudget</title>
     <style>
         * {
             margin: 0;
@@ -290,6 +290,17 @@
             color: white;
         }
 
+        .capacity-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
         @media (max-width: 768px) {
             .navbar {
                 padding: 1rem;
@@ -331,11 +342,11 @@
                     <span style="font-size: 0.8rem;">▼</span>
                 </a>
                 <div class="dropdown-content">
-                    <a href="#">Processor</a>
-                    <a href="#">RAM</a>
-                    <a href="#">VGA</a>
-                    <a href="#">PSU</a>
-                    <a href="#">SSD/HDD</a>
+                    <a href="processor.html">Processor</a>
+                    <a href="ram.html">RAM</a>
+                    <a href="vga.html">VGA</a>
+                    <a href="psu.html">PSU</a>
+                    <a href="ssd.html">SSD/HDD</a>
                 </div>
             </div>
             <a href="#">Tentang Kami</a>
@@ -345,38 +356,51 @@
 
     <div class="container">
         <div class="page-header">
-            <h1>Processor Terbaik</h1>
-            <p>Temukan processor yang sempurna untuk kebutuhan gaming, kerja, dan editing Anda</p>
+            <h1>RAM Memory Terbaik</h1>
+            <p>Pilih RAM dengan kapasitas dan kecepatan yang tepat untuk performa maksimal sistem Anda</p>
         </div>
 
         <div class="filter-section">
-            <h2 class="filter-title">Filter Processor</h2>
+            <h2 class="filter-title">Filter RAM</h2>
             <div class="filter-grid">
                 <div class="filter-group">
                     <label for="brand">Brand</label>
                     <select id="brand">
                         <option value="">Semua Brand</option>
-                        <option value="intel">Intel</option>
-                        <option value="amd">AMD</option>
+                        <option value="corsair">Corsair</option>
+                        <option value="gskill">G.Skill</option>
+                        <option value="kingston">Kingston</option>
+                        <option value="crucial">Crucial</option>
+                        <option value="teamgroup">Team Group</option>
                     </select>
                 </div>
                 <div class="filter-group">
-                    <label for="socket">Socket</label>
-                    <select id="socket">
-                        <option value="">Semua Socket</option>
-                        <option value="lga1700">LGA 1700</option>
-                        <option value="am5">AM5</option>
-                        <option value="am4">AM4</option>
+                    <label for="capacity">Kapasitas</label>
+                    <select id="capacity">
+                        <option value="">Semua Kapasitas</option>
+                        <option value="8gb">8GB</option>
+                        <option value="16gb">16GB</option>
+                        <option value="32gb">32GB</option>
+                        <option value="64gb">64GB</option>
                     </select>
                 </div>
                 <div class="filter-group">
-                    <label for="cores">Jumlah Core</label>
-                    <select id="cores">
-                        <option value="">Semua Core</option>
-                        <option value="4">4 Core</option>
-                        <option value="6">6 Core</option>
-                        <option value="8">8 Core</option>
-                        <option value="12">12+ Core</option>
+                    <label for="type">Tipe RAM</label>
+                    <select id="type">
+                        <option value="">Semua Tipe</option>
+                        <option value="ddr4">DDR4</option>
+                        <option value="ddr5">DDR5</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="speed">Kecepatan</label>
+                    <select id="speed">
+                        <option value="">Semua Kecepatan</option>
+                        <option value="3200">3200 MHz</option>
+                        <option value="3600">3600 MHz</option>
+                        <option value="4800">4800 MHz</option>
+                        <option value="5600">5600 MHz</option>
+                        <option value="6000">6000+ MHz</option>
                     </select>
                 </div>
                 <div class="filter-group">
@@ -392,188 +416,212 @@
 
         <div class="products-grid">
             <div class="product-card">
-                <div class="product-image">Gambar Processor</div>
+                <div class="product-image">Gambar RAM</div>
                 <div class="performance-badge performance-high">High Performance</div>
-                <h3 class="product-title">Intel Core i7-13700K</h3>
-                <p class="product-brand">Intel</p>
+                <h3 class="product-title">G.Skill Trident Z5 RGB <span class="capacity-badge">32GB</span></h3>
+                <p class="product-brand">G.Skill</p>
                 <div class="product-specs">
                     <div class="spec-item">
-                        <span class="spec-label">Core/Thread:</span>
-                        <span class="spec-value">16/24</span>
+                        <span class="spec-label">Kapasitas:</span>
+                        <span class="spec-value">32GB (2x16GB)</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Base Clock:</span>
-                        <span class="spec-value">3.4 GHz</span>
+                        <span class="spec-label">Tipe:</span>
+                        <span class="spec-value">DDR5</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Boost Clock:</span>
-                        <span class="spec-value">5.4 GHz</span>
+                        <span class="spec-label">Kecepatan:</span>
+                        <span class="spec-value">6000 MHz</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Socket:</span>
-                        <span class="spec-value">LGA 1700</span>
+                        <span class="spec-label">Latency:</span>
+                        <span class="spec-value">CL30</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">RGB:</span>
+                        <span class="spec-value">Yes</span>
                     </div>
                 </div>
                 <div class="product-rating">
                     <div class="stars">★★★★★</div>
-                    <span class="rating-text">4.8 (324 ulasan)</span>
+                    <span class="rating-text">4.8 (267 ulasan)</span>
                 </div>
-                <div class="product-price">Rp 6.799.000</div>
+                <div class="product-price">Rp 4.299.000</div>
                 <button class="btn-primary">Lihat Detail</button>
             </div>
 
             <div class="product-card">
-                <div class="product-image">Gambar Processor</div>
+                <div class="product-image">Gambar RAM</div>
                 <div class="performance-badge performance-high">High Performance</div>
-                <h3 class="product-title">AMD Ryzen 7 7700X</h3>
-                <p class="product-brand">AMD</p>
+                <h3 class="product-title">Corsair Dominator Platinum RGB <span class="capacity-badge">32GB</span></h3>
+                <p class="product-brand">Corsair</p>
                 <div class="product-specs">
                     <div class="spec-item">
-                        <span class="spec-label">Core/Thread:</span>
-                        <span class="spec-value">8/16</span>
+                        <span class="spec-label">Kapasitas:</span>
+                        <span class="spec-value">32GB (2x16GB)</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Base Clock:</span>
-                        <span class="spec-value">4.5 GHz</span>
+                        <span class="spec-label">Tipe:</span>
+                        <span class="spec-value">DDR5</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Boost Clock:</span>
-                        <span class="spec-value">5.4 GHz</span>
+                        <span class="spec-label">Kecepatan:</span>
+                        <span class="spec-value">5600 MHz</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Socket:</span>
-                        <span class="spec-value">AM5</span>
+                        <span class="spec-label">Latency:</span>
+                        <span class="spec-value">CL36</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">RGB:</span>
+                        <span class="spec-value">Yes</span>
                     </div>
                 </div>
                 <div class="product-rating">
                     <div class="stars">★★★★★</div>
-                    <span class="rating-text">4.7 (289 ulasan)</span>
+                    <span class="rating-text">4.7 (189 ulasan)</span>
                 </div>
-                <div class="product-price">Rp 5.899.000</div>
+                <div class="product-price">Rp 4.799.000</div>
                 <button class="btn-primary">Lihat Detail</button>
             </div>
 
             <div class="product-card">
-                <div class="product-image">Gambar Processor</div>
-                <div class="performance-badge performance-medium">Mid Range</div>
-                <h3 class="product-title">Intel Core i5-13600K</h3>
-                <p class="product-brand">Intel</p>
+                <div class="product-image">Gambar RAM</div>
+                <div class="performance-badge performance-medium">Gaming Ready</div>
+                <h3 class="product-title">Corsair Vengeance LPX <span class="capacity-badge">16GB</span></h3>
+                <p class="product-brand">Corsair</p>
                 <div class="product-specs">
                     <div class="spec-item">
-                        <span class="spec-label">Core/Thread:</span>
-                        <span class="spec-value">14/20</span>
+                        <span class="spec-label">Kapasitas:</span>
+                        <span class="spec-value">16GB (2x8GB)</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Base Clock:</span>
-                        <span class="spec-value">3.5 GHz</span>
+                        <span class="spec-label">Tipe:</span>
+                        <span class="spec-value">DDR4</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Boost Clock:</span>
-                        <span class="spec-value">5.1 GHz</span>
+                        <span class="spec-label">Kecepatan:</span>
+                        <span class="spec-value">3600 MHz</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Socket:</span>
-                        <span class="spec-value">LGA 1700</span>
+                        <span class="spec-label">Latency:</span>
+                        <span class="spec-value">CL18</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">RGB:</span>
+                        <span class="spec-value">No</span>
                     </div>
                 </div>
                 <div class="product-rating">
                     <div class="stars">★★★★☆</div>
-                    <span class="rating-text">4.6 (412 ulasan)</span>
+                    <span class="rating-text">4.6 (542 ulasan)</span>
                 </div>
-                <div class="product-price">Rp 4.599.000</div>
+                <div class="product-price">Rp 1.899.000</div>
                 <button class="btn-primary">Lihat Detail</button>
             </div>
 
             <div class="product-card">
-                <div class="product-image">Gambar Processor</div>
-                <div class="performance-badge performance-medium">Mid Range</div>
-                <h3 class="product-title">AMD Ryzen 5 7600X</h3>
-                <p class="product-brand">AMD</p>
+                <div class="product-image">Gambar RAM</div>
+                <div class="performance-badge performance-medium">Gaming Ready</div>
+                <h3 class="product-title">Kingston Fury Beast RGB <span class="capacity-badge">16GB</span></h3>
+                <p class="product-brand">Kingston</p>
                 <div class="product-specs">
                     <div class="spec-item">
-                        <span class="spec-label">Core/Thread:</span>
-                        <span class="spec-value">6/12</span>
+                        <span class="spec-label">Kapasitas:</span>
+                        <span class="spec-value">16GB (2x8GB)</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Base Clock:</span>
-                        <span class="spec-value">4.7 GHz</span>
+                        <span class="spec-label">Tipe:</span>
+                        <span class="spec-value">DDR4</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Boost Clock:</span>
-                        <span class="spec-value">5.3 GHz</span>
+                        <span class="spec-label">Kecepatan:</span>
+                        <span class="spec-value">3200 MHz</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Socket:</span>
-                        <span class="spec-value">AM5</span>
+                        <span class="spec-label">Latency:</span>
+                        <span class="spec-value">CL16</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">RGB:</span>
+                        <span class="spec-value">Yes</span>
                     </div>
                 </div>
                 <div class="product-rating">
                     <div class="stars">★★★★☆</div>
-                    <span class="rating-text">4.5 (356 ulasan)</span>
+                    <span class="rating-text">4.5 (378 ulasan)</span>
                 </div>
-                <div class="product-price">Rp 4.199.000</div>
+                <div class="product-price">Rp 1.699.000</div>
                 <button class="btn-primary">Lihat Detail</button>
             </div>
 
             <div class="product-card">
-                <div class="product-image">Gambar Processor</div>
+                <div class="product-image">Gambar RAM</div>
                 <div class="performance-badge performance-budget">Budget Friendly</div>
-                <h3 class="product-title">AMD Ryzen 5 5600</h3>
-                <p class="product-brand">AMD</p>
+                <h3 class="product-title">Crucial Ballistix <span class="capacity-badge">16GB</span></h3>
+                <p class="product-brand">Crucial</p>
                 <div class="product-specs">
                     <div class="spec-item">
-                        <span class="spec-label">Core/Thread:</span>
-                        <span class="spec-value">6/12</span>
+                        <span class="spec-label">Kapasitas:</span>
+                        <span class="spec-value">16GB (2x8GB)</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Base Clock:</span>
-                        <span class="spec-value">3.5 GHz</span>
+                        <span class="spec-label">Tipe:</span>
+                        <span class="spec-value">DDR4</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Boost Clock:</span>
-                        <span class="spec-value">4.4 GHz</span>
+                        <span class="spec-label">Kecepatan:</span>
+                        <span class="spec-value">3200 MHz</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Socket:</span>
-                        <span class="spec-value">AM4</span>
+                        <span class="spec-label">Latency:</span>
+                        <span class="spec-value">CL16</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">RGB:</span>
+                        <span class="spec-value">No</span>
                     </div>
                 </div>
                 <div class="product-rating">
                     <div class="stars">★★★★☆</div>
-                    <span class="rating-text">4.4 (521 ulasan)</span>
+                    <span class="rating-text">4.4 (423 ulasan)</span>
                 </div>
-                <div class="product-price">Rp 2.199.000</div>
+                <div class="product-price">Rp 1.399.000</div>
                 <button class="btn-primary">Lihat Detail</button>
             </div>
 
             <div class="product-card">
-                <div class="product-image">Gambar Processor</div>
+                <div class="product-image">Gambar RAM</div>
                 <div class="performance-badge performance-budget">Budget Friendly</div>
-                <h3 class="product-title">Intel Core i3-12100F</h3>
-                <p class="product-brand">Intel</p>
+                <h3 class="product-title">Team Group T-Force Vulcan Z <span class="capacity-badge">8GB</span></h3>
+                <p class="product-brand">Team Group</p>
                 <div class="product-specs">
                     <div class="spec-item">
-                        <span class="spec-label">Core/Thread:</span>
-                        <span class="spec-value">4/8</span>
+                        <span class="spec-label">Kapasitas:</span>
+                        <span class="spec-value">8GB (2x4GB)</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Base Clock:</span>
-                        <span class="spec-value">3.3 GHz</span>
+                        <span class="spec-label">Tipe:</span>
+                        <span class="spec-value">DDR4</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Boost Clock:</span>
-                        <span class="spec-value">4.3 GHz</span>
+                        <span class="spec-label">Kecepatan:</span>
+                        <span class="spec-value">3200 MHz</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Socket:</span>
-                        <span class="spec-value">LGA 1700</span>
+                        <span class="spec-label">Latency:</span>
+                        <span class="spec-value">CL16</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">RGB:</span>
+                        <span class="spec-value">No</span>
                     </div>
                 </div>
                 <div class="product-rating">
                     <div class="stars">★★★★☆</div>
                     <span class="rating-text">4.3 (298 ulasan)</span>
                 </div>
-                <div class="product-price">Rp 1.899.000</div>
+                <div class="product-price">Rp 899.000</div>
                 <button class="btn-primary">Lihat Detail</button>
             </div>
         </div>

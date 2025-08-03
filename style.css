@@ -71,3 +71,39 @@
             background: linear-gradient(135deg, #2563eb 0%, #9333ea 50%, #4338ca 100%);
             z-index: -1;
         }
+        //tentang saya//
+        .animate-fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+
+    .animate-slide-up {
+      animation: slideUp 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Hover effect for profile photo */
+    .relative:hover .absolute {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
